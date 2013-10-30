@@ -49,7 +49,6 @@ set cursorline
 highlight CursorLine cterm=NONE ctermbg=24
 
 set nobackup
-set nonumber
 set background=dark
 syntax on   			" syntax highlighting
 
