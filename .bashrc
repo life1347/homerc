@@ -25,6 +25,7 @@ alias hr="history -r ~/.histfile/last"
 alias ha="history -a ~/.histfile/last"
 alias hn="history -n ~/.histfile/last"
 alias hc="history -c"
+alias ntptime="sudo /etc/init.d/ntpd stop;sudo ntpdate -s time.stdtime.gov.tw;"
 
 if [[  `uname` =~ "Linux" ]] ; then
    alias ls='ls --color=auto'
