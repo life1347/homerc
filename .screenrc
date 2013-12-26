@@ -29,10 +29,11 @@ bind "<" readbuf $HOME/.screen_exchange
 
 #check key use "showkey -a"
 
+#for mac
 bindkey "^[[1;5C" next
 bindkey "^[[1;5D" prev
+#END
 
-#for mac
 bindkey "^[[5C" next
 bindkey "^[[5D" prev
 
