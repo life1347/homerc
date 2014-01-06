@@ -79,14 +79,14 @@ set inde=
 nnoremap <leader><TAB> :set ai! cin! si! <CR>
 
 " new tab
-map <C-t><C-t> :tabnew<CR>
+map <C-t> :tabnew<CR>
 " close tab
-map <C-t><C-w> :tabclose<CR>
+map <C-c> :tabclose<CR>
 
 
 " change tab
-map <S-H> gT
-map <S-L> gt
+map <C-h> gT
+map <C-l> gt
 
 " Toggle line numbers and fold column for easy copying:
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
@@ -115,11 +115,6 @@ map <PageUp> <C-u>
 map <PageDown> <C-d>
 imap <PageUp> <C-o><C-u>
 imap <PageDown> <C-o><C-d>
-
-
-
-
-
 
 function! WinResize()
     let a:cmd=input(':','vertical resize +1')
@@ -163,5 +158,3 @@ endfunction
 nnoremap <LEADER><F9> :call SetExec()<CR>
 nnoremap <F9> :call Run()<CR>
 nnoremap <LEADER><F10> :call SetArgs()<CR>
-
-
