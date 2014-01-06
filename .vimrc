@@ -81,7 +81,7 @@ nnoremap <leader><TAB> :set ai! cin! si! <CR>
 " new tab
 map <C-t> :tabnew<CR>
 " close tab
-map <C-c> :tabclose<CR>
+map <C-w> :tabclose<CR>
 
 
 " change tab
