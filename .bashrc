@@ -28,6 +28,8 @@ alias hn="history -n ~/.histfile/last"
 alias hc="history -c"
 alias ntptime="sudo /etc/init.d/ntpd stop;sudo ntpdate -s time.stdtime.gov.tw;"
 alias vibashrc="vim ~/.bashrc"
+alias s="sudo"
+alias ss="sudo su"
 
 if [[  `uname` =~ "Linux" ]] ; then
    alias ls='ls --color=auto'
