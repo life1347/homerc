@@ -30,7 +30,7 @@ alias ntptime="sudo /etc/init.d/ntpd stop;sudo ntpdate -s time.stdtime.gov.tw;"
 alias vibashrc="vim ~/.bashrc"
 alias loadbashrc="source ~/.bashrc" 
 alias s="sudo"
-alias ss="sudo su"
+alias ssu="sudo su"
 
 if [[  `uname` =~ "Linux" ]] ; then
    alias ls='ls --color=auto'
