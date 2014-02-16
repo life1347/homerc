@@ -28,6 +28,7 @@ alias hn="history -n ~/.histfile/last"
 alias hc="history -c"
 alias ntptime="sudo /etc/init.d/ntpd stop;sudo ntpdate -s time.stdtime.gov.tw;"
 alias vibashrc="vim ~/.bashrc"
+alias loadbashrc="source ~/.bashrc" 
 alias s="sudo"
 alias ss="sudo su"
 
