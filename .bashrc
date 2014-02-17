@@ -32,6 +32,10 @@ alias loadbashrc="source ~/.bashrc"
 alias s="sudo"
 alias ssu="sudo su"
 
+reservice(){
+    for i in $(ls /etc/init.d/$1*); do $i restart; done
+}
+
 if [[  `uname` =~ "Linux" ]] ; then
    alias ls='ls --color=auto'
    alias ll='ls -alF'
