@@ -20,3 +20,4 @@ for rc in .*rc .*profile ;
 do
 change_file ${rc}
 done
+source ~/.bashrc
