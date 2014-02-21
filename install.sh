@@ -21,5 +21,5 @@ do
 change_file ${rc}
 done
 #source ~/.bashrc
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp -r ./.oh-my-zsh ~/.oh-my-zsh
 chsh -s /bin/zsh
