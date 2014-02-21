@@ -1,18 +1,28 @@
-vbell off
-vbell_msg "Ding Ding!!"
-bell off
-bell_msg "Bell in window %n^G"
-startup_message off
-caption always "%{wK} %=|%{Wb}%-w%{Yr}%n*%t%{Wb}%+w%{wK}|%= "
-hardstatus alwayslastline "%= %= %{Y}(%H) %{R}%e %{R} %l %{wb} %Y/%m/%d %c"
-#termcapinfo xterm "Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm"
-#termcapinfo xterm-color "Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm"
-#defutf8 on
-#defencoding utf8
-#setenv "SEN" "utf8"
-#setenv "DEN" "big5"
-escape "^AA"
+activity "activity: window ~%"
+vbell_msg "bell: window ~%"
+vbellwait 2
+allpartial off
+autodetach on
 
+chdir
+defscrollback 500
+startup_message off
+sessionname shane
+altscreen on
+bindkey -k kD stuff \177
+shell -$SHELL
+
+# Status and caption at the bottom of the terminal
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%= %3n %t%? [ %h ]%? %="
+caption string '%{= kW}%-Lw%{= kG}%50> %n%f* %t%{= kW}%+Lw%< %{= kG}%-= %Y/%m/%d %c:%s%{-}'
+caption always
+
+# Window numbering starts at 1
+bind c screen 1
+bind 0 select 10
+screen 1
 
 bind u encoding utf8 utf8
 bind b encoding big5 utf8
