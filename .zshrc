@@ -68,3 +68,29 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+PATH=${PATH}:${HOME}/bin
+export EDITOR=/usr/bin/vim
+HISTCONTROL=ignoreboth
+HISTSIZE=1000
+HISTFILESIZE=2000
+test -d ~/.histfile/ || mkdir ~/.histfile/
+if [ "$?WINDOW" ] ; then
+   export HISTFILE=~/.histfile/hist$WINDOW
+else
+   export HISTFILE=~/.histfile/hist
+fi
+alias hw="history -w ~/.histfile/last"
+alias hr="history -r ~/.histfile/last"
+alias ha="history -a ~/.histfile/last"
+alias hn="history -n ~/.histfile/last"
+alias hc="history -c"
+alias ntptime="sudo /etc/init.d/ntp stop;sudo ntpdate -s time.stdtime.gov.tw;"
+alias virc="vim ~/.bashrc"
+alias loadrc="source ~/.bashrc" 
+alias s="sudo"
+alias ssu="sudo su"
+
+reservice(){
+    for i in $(ls /etc/init.d/$1*); do $i restart; done
+}
+
