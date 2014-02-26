@@ -21,5 +21,6 @@ do
 change_file ${rc}
 done
 #source ~/.bashrc
+rm -rf ~/.oh-my-zsh
 cp -r ./.oh-my-zsh ~/.oh-my-zsh
 chsh -s /bin/zsh
