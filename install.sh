@@ -11,11 +11,12 @@ change_file(){
         fi
         echo "[Update]  ${hrc}"
         mv ${hrc} ${hrc}.${now}.bak
-        source ${hrc}
     else
         echo "[Create]  ${hrc}"
     fi
     cp ${pwd}/${rc} ${hrc}
+    source ${hrc}
+    echo ${hrc}
 }
 for rc in .*rc .*profile ;
 do
