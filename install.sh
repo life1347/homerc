@@ -25,3 +25,4 @@ done
 rm -rf ~/.oh-my-zsh
 cp -r ./.oh-my-zsh ~/.oh-my-zsh
 chsh -s /bin/zsh
+rm -rf ${pwd}/homerc
