@@ -15,8 +15,7 @@ change_file(){
         echo "[Create]  ${hrc}"
     fi
     cp ${pwd}/${rc} ${hrc}
-    source ${hrc}
-    echo ${hrc}
+    . ${hrc}
 }
 for rc in .*rc .*profile ;
 do
