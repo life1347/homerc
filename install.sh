@@ -11,6 +11,7 @@ change_file(){
         fi
         echo "[Update]  ${hrc}"
         mv ${hrc} ${hrc}.${now}.bak
+        source ${hrc}
     else
         echo "[Create]  ${hrc}"
     fi
