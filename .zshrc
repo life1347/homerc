@@ -89,6 +89,7 @@ alias virc="vim ~/.zshrc"
 alias loadrc="source ~/.zshrc" 
 alias s="sudo"
 alias ssu="sudo su"
+alias updaterc="git clone https://github.com/life1347/homerc.git;./homerc/install.sh;loadrc;rm -rf ./homerc"
 
 reservice(){
     for i in $(ls /etc/init.d/$1*); do $i restart; done
