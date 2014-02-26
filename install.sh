@@ -14,8 +14,8 @@ change_file(){
         source ${hrc}
     else
         echo "[Create]  ${hrc}"
-        cp ${pwd}/${rc} ${hrc}
     fi
+    cp ${pwd}/${rc} ${hrc}
 }
 for rc in .*rc .*profile ;
 do
