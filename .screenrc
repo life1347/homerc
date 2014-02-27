@@ -1,29 +1,17 @@
-activity "activity: window ~%"
-vbell_msg "bell: window ~%"
-vbellwait 2
-allpartial off
-autodetach on
-
-chdir
-defscrollback 500
-startup_message off
-sessionname shane
-altscreen on
-bindkey -k kD stuff \177
-shell -$SHELL
-
-# Status and caption at the bottom of the terminal
-hardstatus on
-hardstatus alwayslastline
-hardstatus string "%= %3n %t%? [ %h ]%? %="
-caption string '%{= kW}%-Lw%{= kG}%50> %n%f* %t%{= kW}%+Lw%< %{= kG}%-= %Y/%m/%d %c:%s%{-}'
-caption always
-
-# Window numbering starts at 1
-bind c screen 1
-bind 0 select 10
-screen 1
-
+altscreen on # erase screen when quit apps                                                                                                                                                 
+defutf8 on
+defc1 off # treat input chars 128 ~ 159 as control functions
+defflow on
+startup_message off 
+shell $SHELL
+defencoding utf8
+bindkey "^b"  encoding big5 utf8
+bindkey "^u"  encoding utf8 big5
+defbce on # erase background with current bg color
+shelltitle "--"
+#caption always "%{WK}%-w%<%{=B GK}%n %t%{= KW}%+w%-09="
+caption always "%{WK}%-w%<%{= GK}%n %t%{= KW}%+w%-09="
+hardstatus alwayslastline "%{R}[ %{w}%1` %{R}]%=%{M}%e %{G}%H %{Y} %c %{R} %d/%m/%Y %{K} Load: %l %{w}"
 bind u encoding utf8 utf8
 bind b encoding big5 utf8
 bind "X" remove
