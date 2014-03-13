@@ -5,8 +5,8 @@ defflow on
 startup_message off 
 shell $SHELL
 defencoding utf8
-bindkey "^b"  encoding big5 utf8
-bindkey "^u"  encoding utf8 big5
+#bindkey "^b"  encoding big5 utf8
+#bindkey "^u"  encoding utf8 big5
 defbce on # erase background with current bg color
 shelltitle "--"
 #caption always "%{WK}%-w%<%{=B GK}%n %t%{= KW}%+w%-09="
