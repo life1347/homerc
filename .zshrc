@@ -100,3 +100,6 @@ reservice(){
     for i in $(ls /etc/init.d/$1*); do $i restart; done
 }
 
+killscreen(){
+    screen -X -S $1 quit 
+}
