@@ -92,6 +92,7 @@ alias sshlab="ssh life@140.113.207.156"
 alias sshbsd1="ssh tacchen@bsd1.cs.nctu.edu.tw"
 alias sshvp="ssh tacchen@140.114.91.53"
 alias sshops="ssh tacchen@openstack.nctu.edu.tw -p2222"
+alias sshjumper="ssh life@140.113.207.124"
 alias ssu="sudo su"
 alias updaterc="git clone https://github.com/life1347/homerc.git;./homerc/install.sh;loadrc;rm -rf ./homerc"
 
