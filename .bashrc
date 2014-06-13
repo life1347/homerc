@@ -9,7 +9,7 @@
 # \033[0;37m - Grey
 # \033[0;39m - White
 export TERM=xterm-256color
-export PS1='\[\e[1;36m\]\t \[\e[01;33m\]\u\[\e[m\]@\h\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]\$ '
+export PS1='\[\e[1;36m\]\t \[\e[01;33m\]\u\[\e[m\]@\h\[\e[0m\]:\[\e[01;34m\]\w\n\[\e[0m\]>> '
 PATH=${PATH}:${HOME}/bin
 export EDITOR=/usr/bin/vim
 HISTCONTROL=ignoreboth
@@ -31,6 +31,8 @@ alias vibashrc="vim ~/.bashrc"
 alias loadbashrc="source ~/.bashrc" 
 alias s="sudo"
 alias ssu="sudo su"
+alias normalday='sudo mjpg_streamer -i "/usr/lib/input_uvc.so -d /dev/video0 -y  -r 320x240 -f 10" -o "/usr/lib/output_http.so -p 8090 -w /var/www/" &'
+alias temp='sudo /opt/vc/bin/vcgencmd measure_temp'
 
 reservice(){
     for i in $(ls /etc/init.d/$1*); do $i restart; done
