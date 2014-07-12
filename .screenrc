@@ -11,7 +11,7 @@ defbce on # erase background with current bg color
 shelltitle "--"
 #caption always "%{WK}%-w%<%{=B GK}%n %t%{= KW}%+w%-09="
 caption always "%{WK}%-w%<%{= GK}%n %t%{= KW}%+w%-09="
-hardstatus alwayslastline "%{R}[ %{w}%1` %{R}]%=%{M}%e %{G}%H %{Y} %c %{R} %d/%m/%Y %{K} Load: %l %{w}"
+hardstatus alwayslastline "%{R}[ %{w}%1` %{R}]%=%{M}%e %{G}%H %{Y} %c %{R} %d/%m/%Y %{K}"
 bind u encoding utf8 utf8
 bind b encoding big5 utf8
 bind "X" remove
