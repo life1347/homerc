@@ -21,8 +21,8 @@ for rc in .*rc .*profile ;
 do
 change_file ${rc}
 done
-#source ~/.bashrc
 rm -rf ~/.oh-my-zsh
-cp -r ./.oh-my-zsh ~/.oh-my-zsh
-cp ./.ssh/config ~/.ssh/config
+cp -r .oh-my-zsh ~/.oh-my-zsh
+cp -r .ssh/config ~/.ssh/config
 chsh -s /bin/zsh
+source ~/.zshrc

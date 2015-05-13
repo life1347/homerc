@@ -10,13 +10,12 @@ defencoding utf8
 defbce on # erase background with current bg color
 shelltitle "--"
 #caption always "%{WK}%-w%<%{=B GK}%n %t%{= KW}%+w%-09="
-caption always "%{WK}%-w%<%{= GK}%n %t%{= KW}%+w%-09="
-hardstatus alwayslastline "%{R}[ %{w}%1` %{R}]%=%{M}%e %{G}%H %{Y} %c %{R} %d/%m/%Y %{K}"
+hardstatus alwayslastline "%{WK}%-w%>%{= GK} %n:%H %{= KW}%+w %=%{RW} %H %{WR} %c %{GK}"
 bind u encoding utf8 utf8
 bind b encoding big5 utf8
 bind "X" remove
 bind "Q" only
-bind "|" split -v
+bind "|" split
 bind "-" split
 bind "c" screen
 bind "l" redisplay

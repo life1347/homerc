@@ -90,22 +90,5 @@ alias ha="history -a ~/.histfile/last"
 alias hn="history -n ~/.histfile/last"
 alias hc="history -c"
 alias ntptime="sudo /etc/init.d/ntp stop;sudo ntpdate -s time.stdtime.gov.tw;"
-alias virc="vim ~/.zshrc"
-alias loadrc="source ~/.zshrc" 
 alias s="sudo"
 alias ssu="sudo su"
-alias sshlab="ssh life@140.113.207.156"
-alias sshbsd1="ssh tacchen@bsd1.cs.nctu.edu.tw"
-alias sshvp="ssh life@vm5.no-ip.biz"
-alias sshops="ssh tacchen@openstack.nctu.edu.tw -p2222"
-alias sshjumper="ssh life@140.113.207.124"
-alias ssu="sudo su"
-alias updaterc="git clone https://github.com/life1347/homerc.git;./homerc/install.sh;loadrc;rm -rf ./homerc"
-
-reservice(){
-    for i in $(ls /etc/init.d/$1*); do $i restart; done
-}
-
-killscreen(){
-    screen -X -S $1 quit 
-}
