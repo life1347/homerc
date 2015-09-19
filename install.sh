@@ -24,6 +24,7 @@ done
 if type "fish" > /dev/null; then
     if [ -e /usr/bin/fish ]; then
         chsh -s /usr/bin/fish
+    fi
 fi
 cp -r .ssh/config ~/.ssh/config
 cp -r fish ~/.config
