@@ -21,7 +21,9 @@ do
 change_file ${rc}
 done
 # check fish shell is exist
-if type "fish" > /dev/null; then
+if ! type "fish" &> /dev/null; then
+    echo "[WARNING]  Fish not installed"
+else
     if [ -e /usr/bin/fish ]; then
         chsh -s /usr/bin/fish
     fi
