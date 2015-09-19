@@ -22,7 +22,7 @@ change_file ${rc}
 done
 # check fish shell is exist
 fish_path=$(cat /etc/shells |grep fish)
-if [[ $fish_path ]]; then
+if [ $fish_path ]; then
     chsh -s $fish_path
 else
     echo '[WARNING]  Fish not installed'
