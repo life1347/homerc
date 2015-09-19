@@ -21,12 +21,11 @@ do
 change_file ${rc}
 done
 # check fish shell is exist
-if ! type "fish" &> /dev/null; then
-    echo "[WARNING]  Fish not installed"
+fish_path=$(cat /etc/shells |grep fish)
+if [[ $fish_path ]]; then
+    chsh -s $fish_path
 else
-    if [ -e /usr/bin/fish ]; then
-        chsh -s /usr/bin/fish
-    fi
+    echo '[WARNING]  Fish not installed'
 fi
 cp -r .ssh/config ~/.ssh/config
 cp -r fish ~/.config
