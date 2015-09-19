@@ -15,14 +15,15 @@ change_file(){
         echo "[Create]  ${hrc}"
     fi
     cp ${pwd}/${rc} ${hrc}
-    . ${hrc}
 }
 for rc in .*rc .*profile ;
 do
 change_file ${rc}
 done
-rm -rf ~/.oh-my-zsh
-cp -r .oh-my-zsh ~/.oh-my-zsh
+# check fish shell is exist
+if type "fish" > /dev/null; then
+    if [ -e /usr/bin/fish ]; then
+        chsh -s /usr/bin/fish
+fi
 cp -r .ssh/config ~/.ssh/config
-chsh -s /bin/zsh
-source ~/.zshrc
+cp -r fish ~/.config

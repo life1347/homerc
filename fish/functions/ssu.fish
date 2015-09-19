@@ -1,0 +1,1 @@
+alias ssu "sudo su"
