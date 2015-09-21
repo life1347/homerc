@@ -28,4 +28,5 @@ else
     echo '[WARNING]  Fish not installed'
 fi
 cp -r .ssh/config ~/.ssh/config
+install -d ~/.config
 cp -r fish ~/.config
