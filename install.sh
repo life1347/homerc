@@ -29,7 +29,7 @@ if [ ! $fish_path ]; then
         install='sudo apt-get -y install'
         remove='sudo apt-get -y remove'
         pkginst='sudo dpkg -i'
-        $install git screen vim fish
+        $install screen vim fish
     fi
     if ! echo $DIST | egrep 'Ubuntu|Debian'; then
         echo '[WARNING]  Fish not installed'
