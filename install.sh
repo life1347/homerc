@@ -40,6 +40,6 @@ if [ ! $fish_path ]; then
 fi
 chsh -s $fish_path
 install -d ~/.ssh/config
-cp -r .ssh/config ~/.ssh/config
+cp -r .ssh/* ~/.ssh/
 install -d ~/.config
 cp -r fish ~/.config
