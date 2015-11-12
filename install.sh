@@ -39,7 +39,7 @@ if [ ! $fish_path ]; then
     fish_path=$(cat /etc/shells |grep fish)
 fi
 chsh -s $fish_path
-install -d ~/.ssh/config
+install -d ~/.ssh/
 cp -r .ssh/* ~/.ssh/
 install -d ~/.config
 cp -r fish ~/.config
