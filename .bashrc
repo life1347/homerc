@@ -13,7 +13,7 @@ export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export TERM=xterm-256color
-export PS1="\[\033[38;5;10m\]\u@\h\[$(tput sgr0)\]\[\033[38;5;11m\](\T)\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;14m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\n\[$(tput sgr0)\]\[\033[38;5;9m\]>>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+export PS1="\[\033[38;5;10m\]\u@\h\[$(tput sgr0)\]\[\033[38;5;11m\](\t)\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;14m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\n\[$(tput sgr0)\]\[\033[38;5;9m\]>>\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 PATH=${PATH}:${HOME}/bin
 export EDITOR=/usr/bin/vim
 HISTCONTROL=ignoreboth
@@ -35,6 +35,8 @@ alias vibashrc="vim ~/.bashrc"
 alias loadbashrc="source ~/.bashrc" 
 alias s="sudo"
 alias ssu="sudo su"
+alias normalday='sudo mjpg_streamer -i "/usr/lib/input_uvc.so -d /dev/video0 -y  -r 320x240 -f 10" -o "/usr/lib/output_http.so -p 8090 -w /var/www/" &'
+alias temp='sudo /opt/vc/bin/vcgencmd measure_temp'
 
 reservice(){
     for i in $(ls /etc/init.d/$1*); do $i restart; done
