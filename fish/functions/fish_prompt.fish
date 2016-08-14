@@ -31,7 +31,7 @@ function fish_prompt
     echo -n -s $error_color $fish $normal_color
   end
 
-  echo -n " ("(whoami)"@"(hostname -s)")"
+  echo -n " "(hostname -s)
 
   if git_is_repo
     if test "$theme_short_path" = 'yes'
@@ -57,5 +57,5 @@ function fish_prompt
 
   echo
 
-  echo -n -s $error_color"» "
+  echo -n -s $directory_color(whoami)$error_color" » "
 end
