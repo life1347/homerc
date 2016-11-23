@@ -20,7 +20,8 @@ function fish_prompt
   set -l none     ""
 
   set -l normal_color     (set_color normal)
-  set -l success_color    (set_color $fish_pager_color_progress ^/dev/null; or set_color cyan)
+  #set -l success_color    (set_color $fish_pager_color_progress ^/dev/null; or set_color cyan)
+  set -l success_color    (set_color $fish_color ^/dev/null; or set_color cyan)
   set -l error_color      (set_color $fish_color_error ^/dev/null; or set_color red --bold)
   set -l directory_color  (set_color $fish_color_quote ^/dev/null; or set_color brown)
   set -l repository_color (set_color $fish_color_cwd ^/dev/null; or set_color green)
@@ -31,7 +32,7 @@ function fish_prompt
     echo -n -s $error_color $fish $normal_color
   end
 
-  echo -n " "(hostname -s)
+  echo -n " "(hostname -s) "("(date +%H:%M:%S)")"
 
   if git_is_repo
     if test "$theme_short_path" = 'yes'
